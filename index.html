@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Example Practice</title>
-    <link rel="stylesheet" href="css/custom.css">
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -15,6 +14,9 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+    <!-- Custom styles for practice-->
+    <link rel="stylesheet" href="css/custom.css">
   </head>
   <body data-ng-cloak>
     <ol id="contents">
@@ -157,20 +159,81 @@
             courseUrl: "https://www.udemycom/advanced-jquery-tips-and-tricks-for-developers-designers/",
             coverColour: "green"
         }]'>
-        <div>{{Courses[0].title}}</div>
-        <!-- Example single danger button -->
-        <div class="btn-group">
-            <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-            Action
-            </button>
-            <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Separated link</a></li>
-            </ul>
+        <div class="small mb-1">Courses List:</div>
+        <ol>
+            <li class="small mb-1" data-ng-repeat="Course in Courses">{{Course.title}}</li>
+        </ol>
+            <div class="dropdown mb-4">
+                <button class="btn btn-primary dropdown-toggle" type="button"
+                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    Courses
+                </button>
+                <div class="dropdown-menu animated--fade-in"
+                    aria-labelledby="dropdownMenuButton">
+                    <div data-ng-repeat="Course in Courses"><a class="dropdown-item" href="{{Course.courseUrl}}">{{Course.title}}</a></div>
+                </div>
+            </div>
+            <p class="mb-0 small">Note: This list was manually iterated over!</p>
         </div>
+
+        <a href="#contents" style="float: right">back to top</a>
+        <h2>Utility Example from bootstrap theme</h2>
+        <!-- Fade In Utility Example from bootstrap theme-->
+        <div class="col-lg-6">
+
+            <div class="card position-relative">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Fade In Animation Utilty</h6>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <code>.animated--fade-in</code>
+                    </div>
+                    <div class="small mb-1">Navbar Dropdown Example:</div>
+                    <nav class="navbar navbar-expand navbar-light bg-light mb-4">
+                        <a class="navbar-brand" href="#">Navbar</a>
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                    role="button" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    Dropdown
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right animated--fade-in"
+                                    aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="small mb-1">Dropdown Button Example:</div>
+                    <div class="dropdown mb-4">
+                        <button class="btn btn-primary dropdown-toggle" type="button"
+                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            Dropdown
+                        </button>
+                        <div class="dropdown-menu animated--fade-in"
+                            aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+                    <p class="mb-0 small">Note: This utility animates the CSS opacity property, meaning
+                        it will override any existing opacity on an element being animated!</p>
+                </div>
+            </div>
+            <a href="#contents" style="float: right">back to top</a>
+
+            <h2>Next Example</h2>
+
+        </div>
+
     </div>
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
