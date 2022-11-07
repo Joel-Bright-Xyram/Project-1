@@ -1,5 +1,30 @@
 {
+  "name": "project-1",
+  "version": "1.0.0",
+  "source": "./src/index.html",
+  "scripts": {
+    "dev": "parcel",
+    "build": "parcel build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joel-Bright-Xyram/Project-1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Joel-Bright-Xyram/Project-1/issues"
+  },
+  "homepage": "https://github.com/Joel-Bright-Xyram/Project-1#readme",
+  "description": "",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.7.0",
+    "parcel": "^2.7.0"
+  },
   "dependencies": {
-    "@popperjs/core": "^2.11.6"
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.2"
   }
 }
